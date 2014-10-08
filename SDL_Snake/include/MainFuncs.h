@@ -5,17 +5,23 @@
 #include "CircList.h"
 
 struct snakepart {
-    int x,y;
+    int x;
+    int y;
 };
 
-extern const snakepart center = {32, 14};
+/*
+Alla globala variabler som kommer att behövas under applikationens körning. Dessa går att nå genom dess korrepsonderande get-funktioner. För att sätta t.ex. mainwindow behöver du derefernsera den. */
+extern const snakepart center;
+static SDL_Window * mainwindow;
 
-extern SDL_Window * gamewindow;
-extern CircList<snakepart> snake;
 
+/* Funktionsprototyper */
 
-bool StartSnake();
-void Gameloop();
+/* Kör denna funktion vid starten. Den kommer initiera det viktigaste för att starta snake. Returnerar 0 vid lyckad körning. */
+extern bool StartSnake();
+
+/* Returnerar en pekare till huvudfönstret. */
+extern SDL_Window * GetMainWindow();
 
 
 

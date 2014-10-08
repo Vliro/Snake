@@ -1,18 +1,17 @@
 #include <SDL2/SDL.h>
 #include "MainFuncs.h"
 
-
 int main ( int argc, char** argv )
 {
     StartSnake();
-    SDL_Surface *surface = SDL_GetWindowSurface(gamewindow);
+    SDL_Surface * surface = SDL_GetWindowSurface(GetMainWindow());
     SDL_Rect b;
-    b.h = 200;
-    b.w = 200;
-    b.x = 400;
-    b.y = 200;
-    SDL_FillRect(surface, &b, SDL_MapRGB(surface->format, 0xFB, 0x18, 0xFC));
-    SDL_UpdateWindowSurface(gamewindow);
-    SDL_Delay(1000);
+    b.h = 16;
+    b.w = 12;
+    b.x = 100;
+    b.y = 100;
+    SDL_FillRect(surface, &b, SDL_MapRGB(surface->format, 220, 220, 220));
+    SDL_UpdateWindowSurface(GetMainWindow());
+    SDL_Delay(10000);
 }
 

@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1510F64719E3F17D00CF73A0 /* CircList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1510F64219E3F17D00CF73A0 /* CircList.cpp */; };
 		1510F64819E3F17D00CF73A0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1510F64319E3F17D00CF73A0 /* main.cpp */; };
 		1510F64919E3F17D00CF73A0 /* MainFuncs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1510F64419E3F17D00CF73A0 /* MainFuncs.cpp */; };
-		1510F64A19E3F17D00CF73A0 /* SnakePart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1510F64519E3F17D00CF73A0 /* SnakePart.cpp */; };
+		1510F64C19E3F23800CF73A0 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1510F64B19E3F23800CF73A0 /* SDL2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,11 +28,10 @@
 		1510F62F19E3F16800CF73A0 /* Snake */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Snake; sourceTree = BUILT_PRODUCTS_DIR; };
 		1510F63D19E3F17D00CF73A0 /* CircList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircList.h; sourceTree = "<group>"; };
 		1510F63E19E3F17D00CF73A0 /* MainFuncs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainFuncs.h; sourceTree = "<group>"; };
-		1510F63F19E3F17D00CF73A0 /* SnakePart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnakePart.h; sourceTree = "<group>"; };
-		1510F64219E3F17D00CF73A0 /* CircList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CircList.cpp; sourceTree = "<group>"; };
 		1510F64319E3F17D00CF73A0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1510F64419E3F17D00CF73A0 /* MainFuncs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainFuncs.cpp; sourceTree = "<group>"; };
-		1510F64519E3F17D00CF73A0 /* SnakePart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SnakePart.cpp; sourceTree = "<group>"; };
+		1510F64B19E3F23800CF73A0 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		15A4773819E525B600FFCC0E /* Maths.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Maths.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1510F64C19E3F23800CF73A0 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +49,7 @@
 		1510F62619E3F16800CF73A0 = {
 			isa = PBXGroup;
 			children = (
+				1510F64B19E3F23800CF73A0 /* SDL2.framework */,
 				1510F63B19E3F17D00CF73A0 /* SDL_Snake */,
 				1510F63019E3F16800CF73A0 /* Products */,
 			);
@@ -76,9 +76,9 @@
 		1510F63C19E3F17D00CF73A0 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				15A4773819E525B600FFCC0E /* Maths.h */,
 				1510F63D19E3F17D00CF73A0 /* CircList.h */,
 				1510F63E19E3F17D00CF73A0 /* MainFuncs.h */,
-				1510F63F19E3F17D00CF73A0 /* SnakePart.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -86,10 +86,8 @@
 		1510F64119E3F17D00CF73A0 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				1510F64219E3F17D00CF73A0 /* CircList.cpp */,
 				1510F64319E3F17D00CF73A0 /* main.cpp */,
 				1510F64419E3F17D00CF73A0 /* MainFuncs.cpp */,
-				1510F64519E3F17D00CF73A0 /* SnakePart.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -145,10 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1510F64719E3F17D00CF73A0 /* CircList.cpp in Sources */,
 				1510F64819E3F17D00CF73A0 /* main.cpp in Sources */,
 				1510F64919E3F17D00CF73A0 /* MainFuncs.cpp in Sources */,
-				1510F64A19E3F17D00CF73A0 /* SnakePart.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,14 +224,28 @@
 		1510F63919E3F16800CF73A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_LDFLAGS = "";
 			};
 			name = Debug;
 		};
 		1510F63A19E3F16800CF73A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_LDFLAGS = "";
 			};
 			name = Release;
 		};
@@ -258,6 +268,7 @@
 				1510F63A19E3F16800CF73A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
