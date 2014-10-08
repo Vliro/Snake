@@ -12,15 +12,36 @@
 
 SDL_Rect * PartToRect(snakepart * h) {
     SDL_Rect * ret = new SDL_Rect();
-    ret->x =h->x;
+    ret->x = h->x;
     ret->y = h->y;
-    ret->w = SNAKEWIDTH;
-    ret->h = SNAKEHEIGHT;
+    ret->w = constants::WIDTH;
+    ret->h = constants::HEIGHT;
 }
-snakepart * CreateSnake(CircList<snakepart> * a)
+void CreateSnake(CircList<snakepart> * a)
 {
     snakepart * ret = new snakepart();
-    return ret;
+    switch(getdir())
+    {
+        case SDLK_UP:
+            ret->x = a->gettail().x;
+            ret->y = a->gettail().y + constants::HEIGHT;
+            break;
+        case SDLK_DOWN:
+            ret->x = a->gettail().x;
+            ret->y = a->gettail().y + constants::HEIGHT;
+            break;
+        case SDLK_LEFT:
+            ret->x = a->gettail().x - constants::WIDTH;
+            ret->y = a->gettail().y;
+            break;
+        case SDLK_RIGHT:
+            ret->x = a->gettail().x + constants::WIDTH;
+            ret->y = a->gettail().y;
+            break;
+        default:
+            return;
+    }
+    a->add(ret);
 }
 
 #endif

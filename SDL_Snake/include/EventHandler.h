@@ -8,21 +8,10 @@
 
 #ifndef Snake_EventHandler_h
 #define Snake_EventHandler_h
+
 #include <SDL2/SDL.h>
 
-
-
-
-char keyboardloop()
-{
-    static bool keydown = false;
-    SDL_Event key;
-    while (SDL_PollEvent(&key)) {
-        switch(key.type)
-    case SDL_KEYDOWN:
-        keydown = true;
-        return
-    }
-}
+void keyboardloop();
+SDL_Keycode & getdir();
 
 #endif

@@ -3,7 +3,7 @@
 
 #include <SDL2/SDL.h>
 #include "CircList.h"
-
+#include "EventHandler.h"
 struct snakepart {
     int x;
     int y;
@@ -20,16 +20,17 @@ namespace constants {
 /* Statiska variabler som bara går att nå genom Get-funktioner, för att undvika konflikterande variabler. */
 
 static SDL_Window * mainwindow;
-static SDL_Thread * eventthread;
-
+static CircList<snakepart> * snake;
 
 /* Funktionsprototyper */
 
 /* Kör denna funktion vid starten. Den kommer initiera det viktigaste för att starta snake. Returnerar 0 vid lyckad körning.*/
 extern bool StartSnake();
+extern void QuitSnake();
 
 /* Returnerar en pekare till huvudfönstret. */
 extern SDL_Window * GetMainWindow();
+extern CircList<snakepart> * GetSnake();
 
 
 
