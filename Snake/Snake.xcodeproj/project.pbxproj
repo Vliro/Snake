@@ -32,6 +32,7 @@
 		1510F64419E3F17D00CF73A0 /* MainFuncs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainFuncs.cpp; sourceTree = "<group>"; };
 		1510F64B19E3F23800CF73A0 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		15A4773819E525B600FFCC0E /* Maths.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Maths.h; sourceTree = "<group>"; };
+		15A4773B19E54B8B00FFCC0E /* EventHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventHandler.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 			children = (
 				15A4773819E525B600FFCC0E /* Maths.h */,
 				1510F63D19E3F17D00CF73A0 /* CircList.h */,
+				15A4773B19E54B8B00FFCC0E /* EventHandler.h */,
 				1510F63E19E3F17D00CF73A0 /* MainFuncs.h */,
 			);
 			path = include;

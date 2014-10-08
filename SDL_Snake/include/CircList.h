@@ -20,6 +20,7 @@ class CircList
         };
         Node * tail;
 };
+
 template<typename T>
 CircList<T>::CircList(T * segment)
 {
@@ -52,7 +53,6 @@ CircList<T>::~CircList()
     for(int i = count; i > 1; i-- )
     {
         temp->previous = temp->next;
-        temp->next = temp->previous->next;
         temp->next = temp->previous->next;
         delete temp->previous;
     }
